@@ -37,7 +37,7 @@ namespace Assignment4.Tests
         public void CreateCategory_ValidData_CreteCategoryAndRetunsNewObject()
         {
             var service = new DataService();
-            var category = service.CreateCategory("Test", "CreateCategory_ValidData_CreteCategoryAndRetunsNewObject");
+            Category category = service.CreateCategory("Test", "CreateCategory_ValidData_CreteCategoryAndRetunsNewObject");
             Assert.True(category.Id > 0);
             Assert.Equal("Test", category.Name);
             Assert.Equal("CreateCategory_ValidData_CreteCategoryAndRetunsNewObject", category.Description);

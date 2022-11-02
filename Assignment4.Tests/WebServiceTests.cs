@@ -152,7 +152,7 @@ namespace Assignment4.Tests
 
             Assert.Equal(HttpStatusCode.OK, statusCode);
         }
-#if Comment
+
         [Fact]
         public void ApiCategories_DeleteWithInvalidId_NotFound()
         {
@@ -223,7 +223,6 @@ namespace Assignment4.Tests
             Assert.Equal(0, products.Count);
         }
 
-#endif
 
         // Helpers
 

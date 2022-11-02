@@ -83,6 +83,12 @@ namespace DataLayer
             return false;
         }
 
+        public IList<Product> GetProducts()
+        {
+            using var db = new NorthwindContext();
+            return db.Products.ToList();
+        }
+
         public Product? GetProduct(int id)
         {
             using var db = new NorthwindContext();
@@ -99,6 +105,7 @@ namespace DataLayer
                 .Select(x=> new ProductModel
                 {
                     Name = x.Name,
+                    ProductName = x.Name,
                     UnitPrice = x.UnitPrice,
                     CategoryName = x.Category.Name
                 })
@@ -169,11 +176,6 @@ namespace DataLayer
                }).OrderBy(x=>x.Order.Id)
                .ToList();
 
-        }
-
-        public IList<Product> GetProducts()
-        {
-            throw new NotImplementedException();
         }
 
         public bool UpdateCategory(Category category)

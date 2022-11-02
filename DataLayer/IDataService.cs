@@ -10,6 +10,8 @@ namespace DataLayer
         Category? GetCategory(int id);
         IList<Product> GetProducts();
         Product? GetProduct(int id);
+        IList<ProductModel> GetProductByCategory(int id);
+        IList<ProductModel> GetProductByName(string name);
         void CreateCategory(Category category);
         bool UpdateCategory(Category category);
         bool DeleteCategory(int id);
